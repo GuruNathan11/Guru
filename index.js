@@ -7,6 +7,7 @@ var app = new express();
 var apiRoutes = require('./Routes/routes.js');
 var mongodb = require('./Config/MongoConfig.js');
 
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended : true}));
 app.use(bodyParser.json())
 app.use(express.json());
